@@ -17,11 +17,10 @@ font-size:20px;
 grid-column: container-start/container-end;
 }
 
-
-
 body{
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 button{
 color:white;
 display: block;
@@ -30,7 +29,17 @@ font-size: 10px;
 align-self: flex-start;
 background:black
 }
-
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+input {
+  border: none;
+  background-color: transparent;
+  padding: 30px 0;
+  border-bottom: 1px solid white;
+}
 .first_line{
 font-size:25px;
 font-weight: bold;
@@ -269,43 +278,79 @@ align-item: center;}
 
 .fith_page{
 display: flex;
-justify-content: left;
+justify-content: space-between;
 gap: 3rem;
 margin: 50px auto;
 flex-basis: 40%;
 padding: 2rem 5rem;
-
+margin-bottom: 160px;
 }
 .fith_page_text{
     display: flex;
     justify-content: center;
+    position: relative;
     gap: 1rem;
     flex-direction: column;
-    flex-basis: 40%;
+    flex-basis: 50%;
+    z-index: 10;
 }
+.fith_page_text :after {
+  content: '';
+  position: absolute;
+  width: 160%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #f6f6f6;
+  z-index: -1;
+}
+.fith_page_text--content {
+  width: 80%;}
+
 .fith_page_header{
     font-family: 'Satoshi';
     font-size: 60px;}
+
 .fith_page_headertext{
 font-family: 'Satoshi';
 font-size:18px;
 line-height: 130%;}
+
+.form{
+flex-basis:40%;
+position:relative;
+z-index: 10;
+top: 100px;
+}
 .blue_icon{
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    margin: 50px auto;
-    /* padding: 5rem 5rem 8rem 6rem; */
-    flex-basis: 40%;
+    gap: 1.5rem;
     flex-direction: column;
-background:blue;
+padding: 50px;
+}
+textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+}
+.form::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: #3d5ddb;
+  z-index: -1;
 }
 .last_page{
 display: flex;
     justify-content: center;
     gap: 5rem;
     margin: 50px auto;
-    /* padding: 5rem 5rem 8rem 6rem; */
+
     flex-basis: 40%;
 }
 .last_page_header{
