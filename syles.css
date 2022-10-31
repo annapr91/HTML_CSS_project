@@ -69,6 +69,7 @@ border-bottom:1px solid white;
     display: flex;
     justify-content: space-between;
     color: white;
+    padding: 0rem 5rem
 }
 
 .header_nav_item{
